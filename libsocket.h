@@ -110,7 +110,7 @@ header_t* _create_header(int32_t, int32_t);
  * Deja en len la cantidad de bytes NO enviados
  * Devuelve 0 en caso de exito, o -1 si falla
  */
-int32_t _send_bytes(sock_t*, void*, uint32_t);
+int32_t _send_bytes(sock_t*, void*, int32_t);
 
 
 /**
@@ -118,7 +118,7 @@ int32_t _send_bytes(sock_t*, void*, uint32_t);
  * Deja en len la cantidad de bytes NO recibidos
  * Devuelve 0 en caso de exito; o -1 si falla
  */
-int32_t _receive_bytes(sock_t*, void*, uint32_t);
+int32_t _receive_bytes(sock_t*, void*, int32_t);
 
 /*
  * Realizo el envio de una cabecera
