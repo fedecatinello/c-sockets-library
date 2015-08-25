@@ -90,7 +90,7 @@ header_t* _create_header(int32_t cod_op, int32_t msg_size) {
 
 }
 
-int32_t _send_bytes(sock_t* socket, void* buffer, u_int32_t len) //me aseguro que se envie toda la informacion
+int32_t _send_bytes(sock_t* socket, void* buffer, int32_t len) //me aseguro que se envie toda la informacion
 {
 	int32_t total = 0;
 	int32_t bytesLeft = len;
@@ -106,7 +106,7 @@ int32_t _send_bytes(sock_t* socket, void* buffer, u_int32_t len) //me aseguro qu
 	return n == ERROR_OPERATION ? ERROR_OPERATION : SUCCESS_OPERATION;
 }
 
-int32_t _receive_bytes(sock_t* sock, void* bufferSalida, uint32_t lenBuffer) {
+int32_t _receive_bytes(sock_t* sock, void* bufferSalida, int32_t lenBuffer) {
 	int32_t n = 0;
 	int32_t bytesLeft = lenBuffer;
 	int32_t recibido = 0;
