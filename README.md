@@ -6,7 +6,7 @@ Library to manage stream socket connections in C
 
 It's assumed that `git` is already installed on your local machine. 
 
-To install it in a Debian-based Linux distribution like Ubuntu just run `sudo apt-get install git`.
+To install it on a Debian-based Linux distribution like Ubuntu just run `sudo apt-get install git`.
 
 On a Fedora distribution run the command `sudo yum install git`
 
@@ -16,16 +16,15 @@ For other options, visit [Installing Git](https://git-scm.com/book/en/v2/Getting
 
 1. Open the Linux console.
 
-2. Run the command `git clone https://github.com/fedecatinello/c-sockets-library.git`
+2. Go to your home directory by running `cd $HOME`
 
-3. Enter the repository folder which contains the source files.
+3. Run the command `git clone https://github.com/fedecatinello/c-sockets-library.git`
 
-4. Run command `make all`
+4. Enter the repository folder which contains the source files, just run `cd c-sockets-library/`
 
-5. Create `LD_LIBRARY_PATH` environment variable running `export LD_LIBRARY_PATH=/path/to/the/shared/library`
+5. Run command `make all`
 
-6. Create link betwenn the library and the system, run `ldconfig -n /path/to/the/shared/library`
+6. Create `LD_LIBRARY_PATH` environment variable with the command `export LD_LIBRARY_PATH=$HOME/c-sockets-library/`
 
+7. Create a link between the library and the system by running `ldconfig -n $HOME/c-sockets-library/`
 
-
-  
