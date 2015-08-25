@@ -17,17 +17,9 @@ TARGET_LIB = libsocket.so
 SRCS = libsocket.c
 OBJS = $(SRCS:.c=.o)
 
-#REPOSITIONING
-#HOME_DIR = $HOME
-#cd HOME_DIR
-
-# LD ENVIRONMENT VARIABLE CONFIGURATION
-LD_DIR_PATH = export LD_LIBRARY_PATH=$(HOME_DIR)/libsocket/
-LD_CONFIG = ldconfig 
-
 #COMPILATION RULES
 .PHONY: all
-all: ${TARGET_LIB} clean install
+all: ${TARGET_LIB} clean
 
 $(TARGET_LIB): $(OBJS)
 	$(CC) ${LDFLAGS} -o $@ $^
@@ -40,8 +32,3 @@ include $(SRCS:.c=.d)
 .PHONY: clean
 clean:
 	-${RM} ${OBJS} $(SRCS:.c=.d)
-
-.PHONY: install
-install: 
-	export LD_LIBRARY_PATH=$(HOME_DIR)/libsocket/
-	ldconfig -n $(HOME_DIR)/libsocket/
