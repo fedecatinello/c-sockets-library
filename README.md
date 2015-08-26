@@ -24,7 +24,11 @@ For other options, visit [Installing Git](https://git-scm.com/book/en/v2/Getting
 
 5. Run command `make all`
 
-6. Create `LD_LIBRARY_PATH` environment variable with the command `export LD_LIBRARY_PATH=$HOME/c-sockets-library/`
+6. Open bash configuration with nano CLI editor by running the command `sudo nano /etc/bash.bashrc`
 
-7. Create a link between the library and the system by running `ldconfig -n $HOME/c-sockets-library/`
+7. Create `LD_LIBRARY_PATH`, just add `export LD_LIBRARY_PATH=$HOME/c-sockets-library/` to the end of the file.
+
+8. Save file and exit the editor.
+
+9. Create a link between the library and the system by running `ldconfig -n $HOME/c-sockets-library/`
 
