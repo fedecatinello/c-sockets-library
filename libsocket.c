@@ -97,8 +97,8 @@ int32_t _send_bytes(sock_t* socket, void* buffer, int32_t len) //me aseguro que 
 	int32_t n;
 	while (total < len) {
 		n = _send(socket, buffer + total, bytesLeft);
-		if (n == -1)
-			break;
+		if (n == -1) break;
+
 		total += n;
 		bytesLeft -= n;
 	}
@@ -129,7 +129,6 @@ int32_t _receive_bytes(sock_t* sock, void* bufferSalida, int32_t lenBuffer) {
 
 
 int32_t _send_header(sock_t* socket, header_t* header) {
-
 	int32_t n = _send_bytes(socket, &(header->cod_op), sizeof(int32_t));
 	if (n == ERROR_OPERATION)
 		return ERROR_OPERATION;
@@ -346,7 +345,15 @@ int32_t get_operation_code(header_t* header) {
 	return header->cod_op;
 }
 
+void set_operation_code(header_t* header, int32_t cod_op) {
+	header->cod_op = cod_op;
+}
+
 int32_t get_message_size(header_t* header) {
 
 	return header->size_message;
+}
+
+void set_message_size(header_t* header, int32_t msg_size) {
+	header->size_message = msg_size;
 }

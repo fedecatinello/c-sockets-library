@@ -38,7 +38,6 @@ typedef struct header_operation
 
 }header_t;
 
-
 /* FUNCIONES PRIVADAS */
 
 /**
@@ -218,11 +217,20 @@ void clean_socket(sock_t*);
  */
  int32_t get_operation_code(header_t*);
 
+ /*
+  * Setea el codigo de operacion en un header
+  */
+void set_operation_code(header_t*, int32_t);
+
 /*
  * Obtiene el tamaño de un mensaje a partir de un header
  */
  int32_t get_message_size(header_t*);
-
  
+ /*
+  * Setea el tamaño de un mensaje en un header
+  */
+ void set_message_size(header_t*, int32_t);
+
 
 #endif /* SOCKETS_H_ */
