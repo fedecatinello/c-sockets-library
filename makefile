@@ -11,7 +11,7 @@ LDFLAGS = -shared
 # RM COMAND
 RM = rm -f
 #TARGET LIB NAME
-TARGET_LIB = libsocket.so
+TARGET_LIB = libc-sockets-library.so
 
 #SOURCE & OBJECT FILES
 SRCS = libsocket.c
