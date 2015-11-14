@@ -1,6 +1,6 @@
-#****************************************************************************#
+#********************************************************#
 #			MAKEFILE LIBSOCKET SHARED LIBRARY		     #
-#****************************************************************************#
+#********************************************************#
 
 # C COMPILER
 CC = gcc
@@ -9,7 +9,7 @@ CFLAGS = -fPIC -Wall -Wextra -O2 -g
 # LINKING FLAGS
 LDFLAGS = -shared
 # RM COMAND
-RM = rm -f
+RM = rm -rf
 #TARGET LIB NAME
 TARGET_LIB = libc-sockets-library.so
 
